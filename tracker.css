@@ -1,0 +1,163 @@
+/* Global Styles */
+body { 
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f0f6; /* Slightly off-white for better contrast */
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #d45d79;
+}
+
+a:hover {
+    color: #bf2c61;
+}
+
+/* Tracker Section */
+.tracker-section {
+    position: relative; /* Ensure positioning for the pseudo-element */
+    background: linear-gradient(135deg, #f9d3e0, #f8b7d9);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    padding: 0 20px;
+}
+
+/* Pseudo-element for blurred background */
+.tracker-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('miniprojectbackground.jpg'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Adjust blur strength as needed */
+    z-index: 0; /* Place behind other content */
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+nav .logo {
+    font-family: 'Raleway', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+nav ul li a:hover {
+    color: #d45d79;
+}
+
+.tracker-content {
+    max-width: 800px;
+    text-align: center;
+    position: relative; /* Ensure it stacks above the blur */
+    z-index: 1; /* Ensure this content is above the blur */
+}
+
+.tracker-content h1 {
+    font-family: 'Raleway', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.tracker-form {
+    background-color: rgba(248, 212, 212, 0.9); /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative; /* Ensure it stacks above the blur */
+    z-index: 1; /* Ensure this content is above the blur */
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #d45d79;
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #d45d79;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 2px solid #d45d79;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.submit-btn:hover {
+    background-color: #bf2c61;
+    transform: scale(1.05);
+}
+
+.submit-btn:active {
+    transform: scale(0.95);
+}
+.result-box {
+    background-color: rgba(248, 212, 212, 0.9); /* Light background for the result box */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 30px; /* Spacing above the result box */
+    max-width: 600px; /* Match form width */
+    text-align: left; /* Align text to the left */
+}

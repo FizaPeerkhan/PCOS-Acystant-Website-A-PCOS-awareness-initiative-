@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menstrual Cycle Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tracker.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+<body>
+    <div class="tracker-section">
+        <nav>
+            <div class="logo"> <a href="dashboard.php">PCOS Acystant</a> </div>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="register.php">Register</a></li>
+                <li><a href="login.php">Login</a></li>
+            </ul>
+        </nav>
+        <div class="tracker-content">
+            <h1>Menstrual Cycle Tracker</h1>
+            <form class="tracker-form">
+                <div class="input-group">
+                    <label for="current-cycle">Select Current Cycle:</label>
+                    <input type="text" id="current-cycle" name="current-cycle" value="01/08/2024 - 07/08/2024" />
+                </div>
+                <div class="input-group">
+                    <label for="period-length">How many days does your period last?</label>
+                    <input type="number" id="period-length" name="period-length" value="7" min="1" />
+                </div>
+                <div class="input-group">
+                    <label for="cycle-length">What is your average cycle length (in days)?</label>
+                    <input type="number" id="cycle-length" name="cycle-length" value="28" min="1" />
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+            
+            <!-- Result Box -->
+            <div class="result-box" id="result-box" style="display:none;">
+                <h3>Results</h3>
+                <p id="next-cycle"></p>
+                <p id="cycle-message" style="color: red;"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    $(function() {
+        // Initialize the Date Range Picker
+        $('input[name="current-cycle"]').daterangepicker({
+            opens: 'left',
+            locale: {
+                format: 'DD/MM/YYYY'
+            },
+            autoUpdateInput: true // Automatically update the input field with the selected date range
+        }, function(start, end, label) {
+            console.log("Current cycle selected: " + start.format('DD-MM-YYYY') + ' to ' + end.format('DD-MM-YYYY'));
+
+            // Get user inputs
+            var periodLength = parseInt($('#period-length').val());
+            var averageCycleLength = parseInt($('#cycle-length').val());
+
+            // Calculate the length of the current cycle
+            var currentCycleLength = end.diff(start, 'days') + 1; // Include the start and end day
+            
+            // Calculate the next cycle start and end dates
+            var nextStart = start.clone().add(averageCycleLength, 'days');
+            var nextEnd = nextStart.clone().add(periodLength - 1, 'days'); // Adjust next period length
+
+            // Display the next cycle dates
+            $('#next-cycle').html(
+                "Next expected cycle: " + nextStart.format('DD-MM-YYYY') + " to " + nextEnd.format('DD-MM-YYYY')
+            );
+
+            // Check if the current cycle is irregular
+            var message = "";
+            if (currentCycleLength < averageCycleLength - 2 || currentCycleLength > averageCycleLength + 2) {
+                message = "Your cycle seems irregular. Please consult with a healthcare provider if needed.";
+            } else {
+                message = "Your cycle appears regular.";
+            }
+
+            // Display the message
+            $('#cycle-message').html(message);
+            $('#result-box').show(); // Show the result box
+        });
+
+        // Automatically open the calendar when the input is clicked
+        $('#current-cycle').on('click', function() {
+            $(this).data('daterangepicker').show();
+        });
+    });
+    </script>
+</body>
+</html>

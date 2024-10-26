@@ -1,0 +1,148 @@
+/* Login Styles */
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFE4E1; /* Slightly off-white for better contrast */
+    color: #333; /* Default text color */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative; /* Ensure positioning for the pseudo-element */
+    background: linear-gradient(135deg, #f9d3e0, #f8b7d9);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* Pseudo-element for blurred background */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('miniprojectbackground.jpg'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Adjust blur strength as needed */
+    z-index: 0; /* Place behind other content */
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+nav .logo {
+    font-family: 'Raleway', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+nav ul li a:hover {
+    color: #d45d79;
+}
+
+/* Form Layout */
+.form-container {
+    position: relative; /* Ensure it stacks above the blur */
+    z-index: 1; /* Ensure this content is above the blur */
+    background-color: rgba(248, 212, 212, 0.9); /* White background with transparency */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow for more depth */
+    max-width: 400px; /* Adjusted width for login form */
+    margin: 40px auto; /* Centered form container */
+    text-align: center; /* Center text */
+}
+
+h2 {
+    color: #d45d79;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333; /* Darker color for readability */
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd; /* Light grey border for inputs */
+    border-radius: 5px;
+    background-color: #fafafa; /* Very light grey background for inputs */
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #d45d79;
+    outline: none;
+}
+
+button.cta-btn {
+    background-color: #d45d79;
+    color: white;
+    padding: 12px 24px; /* Increased padding for a more button-like look */
+    border-radius: 25px; /* More rounded corners */
+    font-size: 1rem; /* Slightly larger text */
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition for scaling effect */
+    border: 2px solid #d45d79; /* Subtle border matching the background color */
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    width: auto; /* Let the width adjust to content */
+    max-width: 200px; /* Increased maximum width for better usability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a 3D effect */
+}
+
+button.cta-btn:hover {
+    background-color: #bf2c61;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+button.cta-btn:active {
+    transform: scale(0.95); /* Slightly shrink when clicked */
+}
+
+/* Text Alignment */
+.switch-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.switch-form a {
+    font-weight: 600;
+    color: #d45d79;
+}

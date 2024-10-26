@@ -1,0 +1,222 @@
+/* Global Styles */
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFE4E1;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #d45d79;
+}
+
+a:hover {
+    color: #bf2c61;
+}
+
+/* Blur Background */
+.blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('miniprojectbackground.jpg'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Adjust the blur strength as needed */
+    z-index: -1; /* Make sure it stays behind other content */
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    position: relative;
+    padding: 0 20px;
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+nav .logo {
+    font-family: 'Raleway', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+nav ul li a:hover {
+    color: #d45d79;
+}
+
+.hero-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.highlight-box {
+    background: rgba(248, 212, 212, 0.9); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px; /* Spacing below the box */
+}
+
+.hero-content h1 {
+    font-family: 'Raleway', serif;
+    font-size: 3rem;
+    margin-bottom: 10px; /* Reduced margin for better spacing */
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+/* Quiz Container */
+.quiz-container {
+    padding: 40px 20px;
+    max-width: 650px;
+    margin: 195px auto;
+    background-color: rgba(248, 212, 212, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Quiz Step */
+.quiz-step {
+    display: none;
+}
+
+.quiz-step.active {
+    display: block;
+}
+
+/* Enhanced Question Styling */
+.question {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #e1d8db; /* Soft pink background */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    position: relative;
+}
+
+.question:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.question label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.options label {
+    font-weight: normal;
+    font-size: 1rem;
+    background: #ffffff; /* White background for option labels */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding for better touch targets */
+    transition: background-color 0.2s ease, color 0.2s ease; /* Smooth transition for hover effects */
+}
+
+.options input[type="radio"] {
+    margin-right: 10px;
+}
+
+.options label:hover {
+    background-color: #f8b7d9; /* Highlight on hover */
+    color: #bf2c61; /* Text color change on hover */
+}
+
+/* Navigation Buttons */
+.cta-btn {
+    background-color: #d45d79;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 2px solid #d45d79;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    max-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.cta-btn:hover {
+    background-color: #bf2c61;
+    transform: scale(1.05);
+}
+
+.cta-btn:active {
+    transform: scale(0.95);
+}
+
+/* Previous and Next Buttons */
+.prev-btn {
+    background-color: #6a2e4b;
+    border: 2px solid #6a2e4b;
+}
+
+.prev-btn:hover {
+    background-color: #7b3f5c;
+    border-color: #7b3f5c;
+}
+
+/* Result Styles */
+#result {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    background: #e1d8db;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}

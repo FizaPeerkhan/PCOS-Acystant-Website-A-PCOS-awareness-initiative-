@@ -1,0 +1,145 @@
+/* Global Styles */
+body { 
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFE4E1; /* Background color consistent with theme */
+    color: #333;
+    font-size: 22px; /* Increased base font size */
+}
+
+a {
+    text-decoration: none;
+    color: #d45d79;
+}
+
+a:hover {
+    color: #bf2c61;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative; /* Ensure positioning for the pseudo-element */
+    background: linear-gradient(135deg, #f9d3e0, #f8b7d9);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    padding: 0 20px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('miniprojectbackground.jpg'); /* Same image as the background */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Adjust blur strength as needed */
+    z-index: 0; /* Place behind other content */
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-sizing: border-box;
+    z-index: 2; /* Ensure navigation is above the background */
+}
+
+nav .logo {
+    font-family: 'Raleway', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+nav ul li a:hover {
+    color: #d45d79;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    position: relative; /* Ensure it's positioned relative to the hero-section */
+    z-index: 1; /* Ensure it's above the blurred background */
+    background-color: rgba(248, 212, 212, 0.9); /* Slightly transparent background for readability */
+    padding: 40px; /* Added padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Main Content */
+.main-content {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Raleway', serif;
+    font-size: 2rem; /* Adjusted heading size */
+    color: #d45d79;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cta-btn {
+    background-color: #d45d79;
+    color: white;
+    padding: 16px 32px; /* Increased padding for a more button-like look */
+    border-radius: 30px; /* More rounded corners */
+    font-size: 1.25rem; /* Slightly larger text */
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition for scaling effect */
+    border: 2px solid #d45d79; /* Subtle border matching the background color */
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    max-width: 220px; /* Increased maximum width for better usability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a 3D effect */
+}
+
+.cta-btn:hover {
+    background-color: #bf2c61;
+    transform: scale(1.05);
+}
+
+.cta-btn:active {
+    transform: scale(0.95);
+}

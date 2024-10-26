@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS Diagnostic Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quiz-styles.css">
+    <script src="quiz.js" defer></script>
+</head>
+<body>
+    <div class="blur-background"></div> <!-- Blurred background -->
+    <div class="hero-section">
+        <nav>
+            <div class="logo">PCOS Acystant</div>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="register.php">Register</a></li>
+                <li><a href="login.php">Login</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <div class="highlight-box"> <!-- New highlight box -->
+                <h1>PCOS Diagnostic Quiz</h1>
+                <p>Answer the following questions to assess your risk for PCOS. This quiz is not a diagnostic tool but can help you determine if you should consult a healthcare professional.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="quiz-container">
+        
+        <form id="quiz-form">
+            <div class="quiz-step active" data-step="1">
+                <div class="question">
+                    <label>1. Do you experience irregular periods or infrequent menstruation?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="yes"> Yes</label>
+                        <label><input type="radio" name="q1" value="no"> No</label>
+                    </div>
+                </div>
+                <button type="button" class="cta-btn next-btn">Next</button>
+            </div>
+
+            <div class="quiz-step" data-step="2">
+                <div class="question">
+                    <label>2. Do you have excessive hair growth?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="yes"> Yes</label>
+                        <label><input type="radio" name="q2" value="no"> No</label>
+                    </div>
+                </div>
+                <button type="button" class="cta-btn prev-btn">Previous</button>
+                <button type="button" class="cta-btn next-btn">Next</button>
+            </div>
+
+            <div class="quiz-step" data-step="3">
+                <div class="question">
+                    <label>3. Do you have acne or oily skin?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="yes"> Yes</label>
+                        <label><input type="radio" name="q3" value="no"> No</label>
+                    </div>
+                </div>
+                <button type="button" class="cta-btn prev-btn">Previous</button>
+                <button type="button" class="cta-btn next-btn">Next</button>
+            </div>
+
+            <div class="quiz-step" data-step="4">
+                <div class="question">
+                    <label>4. Have you experienced weight gain or difficulty losing weight, particularly in the midsection?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="yes"> Yes</label>
+                        <label><input type="radio" name="q4" value="no"> No</label>
+                    </div>
+                </div>
+                <button type="button" class="cta-btn prev-btn">Previous</button>
+                <button type="button" class="cta-btn next-btn">Next</button>
+            </div>
+
+            <div class="quiz-step" data-step="5">
+                <div class="question">
+                    <label>5. Do you have a family history of PCOS, diabetes, or heart disease?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="yes"> Yes</label>
+                        <label><input type="radio" name="q5" value="no"> No</label>
+                    </div>
+                </div>
+                <button type="button" class="cta-btn prev-btn">Previous</button>
+                <button type="button" class="cta-btn next-btn">Next</button>
+            </div>
+
+            <div class="quiz-step" data-step="6">
+                <div class="question">
+                    <label>6. Have you been diagnosed with insulin resistance or type 2 diabetes?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="yes"> Yes</label>
+                        <label><input type="radio" name="q6" value="no"> No</label>
+                    </div>
+                </div>
+                <button type="button" class="cta-btn prev-btn">Previous</button>
+                <button type="button" class="cta-btn next-btn">Next</button>
+            </div>
+
+            <div class="quiz-step" data-step="7">
+                <div class="question">
+                    <label>7. Do you experience male pattern baldness or thinning hair?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="yes"> Yes</label>
+                        <label><input type="radio" name="q7" value="no"> No</label>
+                    </div>
+                </div>
+                <button type="button" class="cta-btn prev-btn">Previous</button>
+                <button type="button" class="cta-btn next-btn">Next</button>
+            </div>
+
+            <div class="quiz-step" data-step="8">
+                <div class="question">
+                    <label>8. Have you noticed dark, thick skin patches on your neck, armpits, or groin?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="yes"> Yes</label>
+                        <label><input type="radio" name="q8" value="no"> No</label>
+                    </div>
+                </div>
+                <button type="button" class="cta-btn prev-btn">Previous</button>
+                <button type="button" class="cta-btn next-btn">Next</button>
+            </div>
+
+            <div class="quiz-step" data-step="9">
+                <div class="question">
+                    <label>9. Do you experience fertility issues or difficulty getting pregnant?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="yes"> Yes</label>
+                        <label><input type="radio" name="q9" value="no"> No</label>
+                    </div>
+                </div>
+                <button type="button" class="cta-btn prev-btn">Previous</button>
+                <button type="button" class="cta-btn next-btn">Next</button>
+            </div>
+
+            <div class="quiz-step" data-step="10">
+                <div class="question">
+                    <label>10. Are you under 25 and experiencing irregular periods or other symptoms?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="yes"> Yes</label>
+                        <label><input type="radio" name="q10" value="no"> No</label>
+                    </div>
+                </div>
+                <button type="button" class="cta-btn prev-btn">Previous</button>
+                <button type="submit" class="cta-btn">Submit</button>
+            </div>
+        </form>
+        <div id="result"></div>
+        <!-- Add this after displaying the results -->
+        <button onclick="window.location.href='treatment.html'" class="cta-btn">View Treatment Options</button>
+
+    </div>
+</body>
+</html>

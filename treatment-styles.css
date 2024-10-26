@@ -1,0 +1,139 @@
+/* Global Styles */
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFE4E1;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #d45d79;
+}
+
+a:hover {
+    color: #bf2c61;
+}
+
+/* Blur Background */
+.blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('miniprojectbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    position: relative;
+    padding: 0 20px;
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+nav .logo {
+    font-family: 'Raleway', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+nav ul li a:hover {
+    color: #d45d79;
+}
+
+.hero-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: 'Raleway', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+/* Content Container */
+.content-container {
+    padding: 40px 20px;
+    max-width: 650px;
+    margin: 100px auto;
+    background-color: rgba(248, 212, 212, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #d45d79;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.cta-btn {
+    background-color: #d45d79;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 2px solid #d45d79;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    max-width: 200px;
+}
+
+.cta-btn:hover {
+    background-color: #bf2c61;
+}
+.highlight-box {
+    background: rgba(248, 212, 212, 0.9); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px; /* Spacing below the box */
+}
